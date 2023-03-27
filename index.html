@@ -17,28 +17,39 @@
   <div class="question1 container">
     <p>how are we feeling?</p>
     <div class="moodCircles row" style="margin: 5vw">
-      <div class="circle" style="width:15vw;height:15vw;border-radius:50%;margin: auto;background-color: #6678E8"></div>
-      <div class="circle" style="width:15vw;height:15vw;border-radius:50%;margin: auto;background-color: #01BFC1"></div>
-      <div class="circle" style="width:15vw;height:15vw;border-radius:50%;margin: auto;background-color: #00F0C6"></div>
-      <div class="circle" style="width:15vw;height:15vw;border-radius:50%;margin: auto;background-color: #FDD643"></div>
-      <div class="circle" style="width:15vw;height:15vw;border-radius:50%;margin: auto;background-color: #FDB7A8"></div>
+      <div id="c1" class="circle" style="width:15vw;height:15vw;border-radius:50%;margin: auto;background-color: #6678E8"></div>
+      <div id="c2" class="circle" style="width:15vw;height:15vw;border-radius:50%;margin: auto;background-color: #01BFC1"></div>
+      <div id="c3" class="circle" style="width:15vw;height:15vw;border-radius:50%;margin: auto;background-color: #00F0C6"></div>
+      <div id="c4" class="circle" style="width:15vw;height:15vw;border-radius:50%;margin: auto;background-color: #FDD643"></div>
+      <div id="c5" class="circle" style="width:15vw;height:15vw;border-radius:50%;margin: auto;background-color: #FDB7A8"></div>
     </div>
   </div>
+  <br>
   <div class="question2 container">
     <p class="journalPrompt">question:</p>
-    <form>
-      <textarea id="journalEntry" name="journalEntry">...</textarea><br>
+    <form id="journalEntry">
+      <textarea name="journalEntry" placeholder="completely optional, it's up to you ¯\_(ツ)_/¯"></textarea><br>
       <input type="submit" value="next">
     </form>
   </div>
+  <br>
   <div class="question3 container">
     <p>which guided practice would you prefer?</p>
     <div class="row" style="margin: 5vw">
-      <div class="circle" style="width:30vw;height:30vw;border-radius:45%;margin: auto;background-color: lightgray;">mediate</div>
-      <div class="circle" style="width:30vw;height:30vw;border-radius:45%;margin: auto;background-color: lightgray;">exercise</div>
+      <div id="meditation" class="preference" style="width:30vw;height:30vw;border-radius:45%;margin: auto;background-color: lightgray;">mediation</div>
+      <div id="yoga" class="preference" style="width:30vw;height:30vw;border-radius:45%;margin: auto;background-color: lightgray;">exercise</div>
     </div>
   </div>
-  <div class="container">
+  <div class="confirmation container">
+    <p>If you're ready, I'd like to recommend a video ;)</p>
+    <button id="generate">Let start</button>
+  </div>
+  <br>
+  <div class="video container">
+    <p>here is your generated video:</p>
+    <div class="col">
+      <iframe alt="generated yt video" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+    </div>
   </div>
   <script src="config.js"></script>
   <script src="script.js"></script>

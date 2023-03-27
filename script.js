@@ -8,9 +8,9 @@ const userChoices = {
 const moodData = {
   c1: "positivity+affirmations",
   c2: "positivity+encouraging",
-  c3: "energizing+gratitude",
-  c4: "happy",
-  c5: "great",
+  c3: "self-improvement+energizing",
+  c4: "happy+motivational",
+  c5: "energizing+gratitude",
 };
 
 /// VARIABLE DECLARATIONS ///
@@ -65,10 +65,25 @@ const fetchData = async (url) => {
   }
 };
 
-function generateVideo(userChoices) {
+async function generateVideo(userChoices) {
   let search = `${userChoices.preference}+${userChoices.mood}`;
-  console.log(search);
-  // let link = `https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?part=snippet&q=${search}&type=video&videoDuration=medium`;
-  let link = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=9&q=${search}&type=video&videoDuration=medium&key=${youtubeKey}`;
-  console.log(link);
+  let link = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&q=${search}&type=video&videoDuration=medium&key=${youtubeKey}`;
+  const data = await fetchData(link);
+  addVideosToPage(data.items);
+}
+
+function addVideosToPage(arrayOfVideos) {
+  let videoDiv = document.getElementById("videos");
+  while (videoDiv.firstChild) {
+    videoDiv.removeChild(videoDiv.firstChild);
+  }
+  console.log(arrayOfVideos);
+  arrayOfVideos.forEach((data) => {
+    console.log(data.snippet.title);
+    console.log(data.id.videoId);
+    let video = document.createElement("iframe");
+    video.alt = "generated youtube video";
+    video.src = `https://www.youtube.com/embed/${data.id.videoId}`;
+    videoDiv.appendChild(video);
+  });
 }

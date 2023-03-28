@@ -25,3 +25,14 @@
     opacity: 1;
   }
 }
+
+.carousel-control {
+  width: 5%;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  margin-right: 15px;
+  margin-left: 15px;
+  background-image: none;
+}

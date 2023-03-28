@@ -8,7 +8,9 @@
   <title>Document</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -49,7 +51,31 @@
   <div class="video fade-in container">
     <p>take some time today to explore these videos:</p>
     <div id="videos" class="col">
-      <!-- <iframe alt="generated yt video" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> -->
+      <!-- previously generated videos -->
+    </div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="item active">
+          <iframe id="video-0" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+        <div class="item">
+          <iframe id="video-1" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+        <div class="item">
+          <iframe id="video-2" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
   <script src="config.js"></script>

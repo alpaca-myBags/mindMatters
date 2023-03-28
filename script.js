@@ -76,11 +76,17 @@ function addVideosToPage(arrayOfVideos) {
     videoDiv.removeChild(videoDiv.firstChild);
   }
   console.log(arrayOfVideos);
-  arrayOfVideos.forEach((data) => {
-    let video = document.createElement("iframe");
+  //// PREVIOUSLY GENERATED VIDEOS
+  // arrayOfVideos.forEach((data) => {
+  //   let video = document.createElement("iframe");
+  //   video.alt = "generated youtube video";
+  //   video.src = `https://www.youtube.com/embed/${data.id.videoId}`;
+  //   videoDiv.appendChild(video);
+  // });
+  arrayOfVideos.forEach((data, i) => {
+    let video = document.getElementById("video-" + i);
     video.alt = "generated youtube video";
     video.src = `https://www.youtube.com/embed/${data.id.videoId}`;
-    videoDiv.appendChild(video);
   });
 }
 

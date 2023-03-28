@@ -1,0 +1,27 @@
+.hover {
+  transition: all .2s ease-in-out;
+}
+
+.hover:hover {
+  transform: scale(1.1);
+}
+
+
+.question2, .question3, .confirmation, .video {
+  visibility: hidden;
+}
+
+.fade-in.visible {
+  animation: fade-in 1s ease-out;
+  visibility: visible;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

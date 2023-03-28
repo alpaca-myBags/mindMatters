@@ -9,7 +9,7 @@ const moodData = {
   c1: "positivity+affirmations",
   c2: "positivity+encouraging",
   c3: "self-improvement+energizing",
-  c4: "happy+motivational",
+  c4: "check-in+energizing",
   c5: "energizing+gratitude",
 };
 
@@ -19,42 +19,40 @@ const api_url = "https://type.fit/api/quotes";
 
 /// DOM CONTENT LOADING ///
 document.addEventListener("DOMContentLoaded", async () => {
-  console.log("loaded content");
+  console.log("loaded content, + quote data loaded");
   const quoteData = await fetchData(api_url);
-
-  // const plEASE = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=9&q="meditation"&key=${youtubeKey}`;
-  // const data = await fetchData(plEASE);
-  // console.log("original: ")
-  // console.log(data);
 });
 
 /// QUERY SELECTORS ///
 document.querySelectorAll(".circle").forEach((circle) => {
   circle.addEventListener("click", (e) => {
     userChoices.mood = moodData[e.target.id];
-    console.log(userChoices);
+    changePreferenceColor(e.target.style.backgroundColor);
+    changeBackgroundColor(e.target.style.backgroundColor);
+    fadeInElement(".question2");
   });
 });
 
 document.getElementById("journalEntry").addEventListener("submit", (e) => {
   e.preventDefault();
   userChoices.journalEntry = e.target[0].value;
-  console.log(userChoices);
+  fadeInElement(".question3");
 });
 
 document.querySelectorAll(".preference").forEach((circle) => {
   circle.addEventListener("click", (e) => {
     userChoices.preference = e.target.id;
-    console.log(userChoices);
+    fadeInElement(".confirmation");
   });
 });
 
 document.getElementById("generate").addEventListener("click", (e) => {
+  document.querySelector(".video").style.visibility = "visible";
   generateVideo(userChoices);
+  fadeInElement(".video");
 });
 
 /// HELPER FUNCTIONS ///
-
 const fetchData = async (url) => {
   try {
     const response = await fetch(url);
@@ -79,11 +77,27 @@ function addVideosToPage(arrayOfVideos) {
   }
   console.log(arrayOfVideos);
   arrayOfVideos.forEach((data) => {
-    console.log(data.snippet.title);
-    console.log(data.id.videoId);
     let video = document.createElement("iframe");
     video.alt = "generated youtube video";
     video.src = `https://www.youtube.com/embed/${data.id.videoId}`;
     videoDiv.appendChild(video);
   });
+}
+
+function fadeInElement(queryName) {
+  let element = document.querySelector(queryName);
+  element.classList.add("visible");
+}
+
+function changePreferenceColor(color) {
+  document.querySelectorAll(".preference").forEach((element) => {
+    element.style.backgroundColor = color;
+  });
+}
+
+function changeBackgroundColor(color) {
+  const newNums = color
+    .match(/\d+/g)
+    .map((num) => Math.round(Number(num) + (255 - num) * (1 / 2)));
+  document.body.style.backgroundColor = `rgb(${newNums[0]}, ${newNums[1]}, ${newNums[2]})`;
 }

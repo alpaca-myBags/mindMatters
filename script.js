@@ -15,12 +15,11 @@ const moodData = {
 
 /// VARIABLE DECLARATIONS ///
 const youtubeKey = config.youtubeKey;
-const api_url = "https://type.fit/api/quotes";
+//const api_url = "https://type.fit/api/quotes";
 
 /// DOM CONTENT LOADING ///
 document.addEventListener("DOMContentLoaded", async () => {
   console.log("loaded content, + quote data loaded");
-  const quoteData = await fetchData(api_url);
 });
 
 /// QUERY SELECTORS ///

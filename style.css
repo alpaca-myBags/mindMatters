@@ -60,3 +60,14 @@
 .moodCircles{
   max-width: 700px;
 }
+
+/* nav bar */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  margin-left: 40px;
+}

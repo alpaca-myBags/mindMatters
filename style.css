@@ -57,9 +57,9 @@
   }
 } */
 
-.moodCircles{
+/* .moodCircles{
   max-width: 700px;
-}
+} */
 
 /* nav bar */
 header {
@@ -70,4 +70,9 @@ header {
 
 #logo {
   margin-left: 40px;
+}
+
+.navLinks{
+  align-self: "center";
+
 }

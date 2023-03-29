@@ -23,20 +23,20 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 // ----- Quote api ----- 
+
 const api_url = "https://type.fit/api/quotes";
 const quoteContainer = document.getElementById('quote-container');
 
 fetch('https://type.fit/api/quotes')
   .then(response => response.json())
   .then(data => {
-    console.log(data);
-    data.forEach(quote => {
-      const quoteElement = document.createElement('p');
-      quoteElement.textContent = `${quote.text} - ${quote.author}`;
-      quoteContainer.appendChild(quoteElement);
-    });
+    let index = Math.floor(Math.random() * 1643);
+    console.log(data[index]);
+    quoteContainer.innerText = `${data[index].text} - ${data[index].author}`
   })
   .catch(error => console.log(error));
+
+
 
 /// QUERY SELECTORS ///
 document.querySelectorAll(".circle").forEach((circle) => {

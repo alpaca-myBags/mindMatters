@@ -1,23 +1,41 @@
+.container {
+  max-width: 768px;
+  align-self: center;
+  justify-content: center;
+}
+
 .navbar.navbar-6 .navbar-toggler-icon {
-    background-image: url('https://mdbootstrap.com/img/svg/hamburger8.svg?color=E3005C');
-  }
-  
-.circle{
+  background-image: url("https://mdbootstrap.com/img/svg/hamburger8.svg?color=E3005C");
+}
+
+.circle {
   width: min(15vw, 140px) !important;
   height: min(15vw, 140px) !important;
   border-radius: 500px;
-  /* margin: auto */
+  margin: auto
 }
+
+.preference{
+  width: min(30vw, 250px) !important;
+  height: min(30vw, 250px) !important;
+  border-radius: 1500px;
+  margin: auto;
+  align-content: center;
+  justify-content: center;
+}
+
 .hover {
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .hover:hover {
   transform: scale(1.1);
 }
 
-
-.question2, .question3, .confirmation, .video {
+.question2,
+.question3,
+.confirmation,
+.video {
   visibility: hidden;
 }
 
@@ -32,7 +50,6 @@
   }
   to {
     opacity: 1;
-
   }
 }
 
@@ -72,7 +89,6 @@ header {
   margin-left: 40px;
 }
 
-.navLinks{
+.navLinks {
   align-self: "center";
-
 }

@@ -20,7 +20,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <div class="pos-t">
+    <div class="pos-t container">
       <div class="collapse" id="navbarToggleExternalContent">
         <div class="p-4" style="display: flex; flex-direction: column">
           <a class="text navLinks" href="index.html" style="align-self: center"
@@ -60,11 +60,13 @@
       </nav>
     </div>
 
-    <section>
-      <p id="quote-container"></p>
-    </section>
+    <div class="container">
+      <section>
+        <p id="quote-container"></p>
+      </section>
+    </div>
 
-    <div class="question1 container container-sm-max">
+    <div class="question1 container container-xs-max">
       <p>how are we feeling today?</p>
       <div class="moodCircles row">
         <div
@@ -72,7 +74,6 @@
           class="circle grow hover"
           style="background-color: #6678e8"
         ></div>
-        <!-- col d-inline m-2 -->
         <div
           id="c2"
           class="circle grow hover"
@@ -108,35 +109,13 @@
       </form>
     </div>
     <br />
-    <div class="question3 fade-in container">
+    <div class="question3 fade-in container container-xs-max">
       <p>which guided practice would you prefer?</p>
       <div class="row" style="margin: 5vw">
-        <div
-          id="meditation"
-          class="preference"
-          style="
-            width: 30vw;
-            height: 30vw;
-            border-radius: 45%;
-            margin: auto;
-            background-color: lightgray;
-          "
-        >
-          mediation
+        <div id="meditation" class="preference grow hover">
+          <p>mediation</p>
         </div>
-        <div
-          id="yoga"
-          class="preference"
-          style="
-            width: 30vw;
-            height: 30vw;
-            border-radius: 45%;
-            margin: auto;
-            background-color: lightgray;
-          "
-        >
-          exercise
-        </div>
+        <div id="yoga" class="preference grow hover"><p style="align-self: center;">exercise</p></div>
       </div>
     </div>
     <div class="confirmation fade-in container">

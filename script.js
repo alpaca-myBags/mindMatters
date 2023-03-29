@@ -22,11 +22,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   console.log("loaded content, + quote data loaded");
 });
 
-// ----- Quote api ----- 
+// ----- Quote api -----
 
-const quoteContainer = document.getElementById('quote-container');
+const quoteContainer = document.getElementById("quote-container");
 
-fetch('https://type.fit/api/quotes')
+fetch("https://type.fit/api/quotes")
   .then(response => response.json())
   .then(data => {
     console.log(data);
@@ -39,8 +39,8 @@ fetch('https://type.fit/api/quotes')
   .catch(error => console.log(error));
 
 /// QUERY SELECTORS ///
-document.querySelectorAll(".circle").forEach((circle) => {
-  circle.addEventListener("click", (e) => {
+document.querySelectorAll(".circle").forEach(circle => {
+  circle.addEventListener("click", e => {
     userChoices.mood = moodData[e.target.id];
     changePreferenceColor(e.target.style.backgroundColor);
     changeBackgroundColor(e.target.style.backgroundColor);
@@ -48,27 +48,27 @@ document.querySelectorAll(".circle").forEach((circle) => {
   });
 });
 
-document.getElementById("journalEntry").addEventListener("submit", (e) => {
+document.getElementById("journalEntry").addEventListener("submit", e => {
   e.preventDefault();
   userChoices.journalEntry = e.target[0].value;
   fadeInElement(".question3");
 });
 
-document.querySelectorAll(".preference").forEach((circle) => {
-  circle.addEventListener("click", (e) => {
+document.querySelectorAll(".preference").forEach(circle => {
+  circle.addEventListener("click", e => {
     userChoices.preference = e.target.id;
     fadeInElement(".confirmation");
   });
 });
 
-document.getElementById("generate").addEventListener("click", (e) => {
+document.getElementById("generate").addEventListener("click", e => {
   document.querySelector(".video").style.visibility = "visible";
   generateVideo(userChoices);
   fadeInElement(".video");
 });
 
 /// HELPER FUNCTIONS ///
-const fetchData = async (url) => {
+const fetchData = async url => {
   try {
     const response = await fetch(url);
     const data = await response.json();
@@ -113,7 +113,7 @@ function fadeInElement(queryName) {
 }
 
 function changePreferenceColor(color) {
-  document.querySelectorAll(".preference").forEach((element) => {
+  document.querySelectorAll(".preference").forEach(element => {
     element.style.backgroundColor = color;
   });
 }
@@ -121,6 +121,6 @@ function changePreferenceColor(color) {
 function changeBackgroundColor(color) {
   const newNums = color
     .match(/\d+/g)
-    .map((num) => Math.round(Number(num) + (255 - num) * (1 / 2)));
+    .map(num => Math.round(Number(num) + (255 - num) * (1 / 2)));
   document.body.style.backgroundColor = `rgb(${newNums[0]}, ${newNums[1]}, ${newNums[2]})`;
 }

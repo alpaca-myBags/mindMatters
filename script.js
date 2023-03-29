@@ -14,27 +14,27 @@ const moodData = {
 };
 
 /// VARIABLE DECLARATIONS ///
-// const youtubeKey = config.youtubeKey;
-const api_url = "https://type.fit/api/quotes";
+const youtubeKey = config.youtubeKey;
+// const api_url = "https://type.fit/api/quotes";
 
 /// DOM CONTENT LOADING ///
 document.addEventListener("DOMContentLoaded", async () => {
   console.log("loaded content, + quote data loaded");
 });
 
-// ----- Quote api -----
-
-const quoteContainer = document.getElementById("quote-container");
+// ----- Quote api ----- 
+const api_url = "https://type.fit/api/quotes";
+const quoteContainer = document.getElementById('quote-container');
 
 fetch("https://type.fit/api/quotes")
   .then(response => response.json())
   .then(data => {
     console.log(data);
-    // data.forEach(quote => {
-    //   const quoteElement = document.createElement('p');
-    //   quoteElement.textContent = `${quote.text} - ${quote.author}`;
-    //   quoteContainer.appendChild(quoteElement);
-    // });
+    data.forEach(quote => {
+      const quoteElement = document.createElement('p');
+      quoteElement.textContent = `${quote.text} - ${quote.author}`;
+      quoteContainer.appendChild(quoteElement);
+    });
   })
   .catch(error => console.log(error));
 

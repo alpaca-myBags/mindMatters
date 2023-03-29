@@ -19,12 +19,13 @@
   </header>
   <div class="question1 container">
     <p>how are we feeling today?</p>
-    <div class="moodCircles row" style="margin: 5vw">
-      <div id="c1" class="circle grow hover" style="width:15vw;height:15vw;border-radius:50%;margin: auto;background-color: #6678E8"></div>
-      <div id="c2" class="circle grow hover" style="width:15vw;height:15vw;border-radius:50%;margin: auto;background-color: #01BFC1"></div>
-      <div id="c3" class="circle grow hover" style="width:15vw;height:15vw;border-radius:50%;margin: auto;background-color: #00F0C6"></div>
-      <div id="c4" class="circle grow hover" style="width:15vw;height:15vw;border-radius:50%;margin: auto;background-color: #FDD643"></div>
-      <div id="c5" class="circle grow hover" style="width:15vw;height:15vw;border-radius:50%;margin: auto;background-color: #FDB7A8"></div>
+    <div class="moodCircles row">
+      <div id="c1" class="circle grow hover" style="background-color: #6678E8"></div> 
+      <!-- col d-inline m-2 -->
+      <div id="c2" class="circle grow hover" style="background-color: #01BFC1"></div>
+      <div id="c3" class="circle grow hover" style="background-color: #00F0C6"></div>
+      <div id="c4" class="circle grow hover" style="background-color: #FDD643"></div>
+      <div id="c5" class="circle grow hover" style="background-color: #FDB7A8"></div>
     </div>
   </div>
   <br>
@@ -55,15 +56,15 @@
     </div>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
-        <div class="item active">
+        <div class="item active videoWrapper" style="--aspect-ratio: 10 / 16;">
           <iframe id="video-0" frameborder="0"
             allowfullscreen></iframe>
         </div>
-        <div class="item">
+        <div class="item videoWrapper" style="--aspect-ratio: 10 / 16;">
           <iframe id="video-1" frameborder="0"
             allowfullscreen></iframe>
         </div>
-        <div class="item">
+        <div class="item videoWrapper" style="--aspect-ratio: 10 / 16;">
           <iframe id="video-2" frameborder="0"
             allowfullscreen></iframe>
         </div>

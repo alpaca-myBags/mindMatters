@@ -87,6 +87,8 @@ function addVideosToPage(arrayOfVideos) {
     let video = document.getElementById("video-" + i);
     video.alt = "generated youtube video";
     video.src = `https://www.youtube.com/embed/${data.id.videoId}`;
+    video.style.width = "100%";
+    video.style.height = "100%";
   });
 }
 

@@ -19,25 +19,39 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <div class="pos-f-t">
+    <div class="pos-t container">
       <div class="collapse" id="navbarToggleExternalContent">
         <div class="p-4" style="display: flex; flex-direction: column">
-          <a class="text" href="index.html">Home</a>
-          <a class="text" href="resources.html">Resources</a>
-          <a class="text" href="about.html">About Us</a>
+          <a class="text navLinks" 
+          href="index.html" 
+          style="align-self: center"
+            >Home</a
+          >
+          <a
+            class="text navLinks"
+            href="resources.html"
+            style="align-self: center"
+            >Resources</a
+          >
+          <a class="text navLinks" 
+          href="about.html" 
+          style="align-self: center"
+            >About Us</a
+          >
         </div>
       </div>
-      <nav class="navbar sticky-top">
+      <nav class="navbar navbar-1 sticky-top">
         <p>Mind Matters</p>
         <img
           id="logo"
           alt="the logo"
           src="images/group-therapy.png"
-          height="55px"
-          width="55px"
+          height="30%"
+          width="30%"
+          class ="img-fluid"
         />
         <button
-          class="navbar-toggler"
+          class="navbar-toggler aria-controls"
           type="button"
           data-toggle="collapse"
           data-target="#navbarToggleExternalContent"

@@ -42,6 +42,7 @@ document.querySelectorAll(".circle").forEach(circle => {
     userChoices.mood = moodData[e.target.id];
     changePreferenceColor(e.target.style.backgroundColor);
     changeBackgroundColor(e.target.style.backgroundColor);
+    generateQuestion();
     fadeInElement(".question2");
   });
 });
@@ -76,6 +77,32 @@ const fetchData = async url => {
   }
 };
 
+function generateQuestion() {
+  let prompt = document.querySelector(".journalPrompt");
+  console.log(userChoices.mood);
+  switch (userChoices.mood) {
+    case "positivity+affirmations":
+      prompt.innerText =
+        "that sucks, you can elaborate if you want, or move on to the next";
+      break;
+    case "positivity+encouraging":
+      prompt.innerText =
+        "you can elaborate if you want, or move on to the next";
+      break;
+    case "self-improvement+energizing":
+      prompt.innerText =
+        "we have an optional journal entry here, or you can move on";
+      break;
+    case "check-in+energizing":
+      prompt.innerText =
+        "thats good! you can talk about it more, or go to the next";
+      break;
+    case "energizing+gratitude":
+      prompt.innerText = "lovely! you can share some more, or move on";
+      break;
+  }
+}
+
 async function generateVideo(userChoices) {
   let search = `${userChoices.preference}+${userChoices.mood}`;
   let link = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&q=${search}&type=video&videoDuration=medium&key=${youtubeKey}`;
@@ -89,13 +116,6 @@ function addVideosToPage(arrayOfVideos) {
     videoDiv.removeChild(videoDiv.firstChild);
   }
   console.log(arrayOfVideos);
-  //// PREVIOUSLY GENERATED VIDEOS
-  // arrayOfVideos.forEach((data) => {
-  //   let video = document.createElement("iframe");
-  //   video.alt = "generated youtube video";
-  //   video.src = `https://www.youtube.com/embed/${data.id.videoId}`;
-  //   videoDiv.appendChild(video);
-  // });
   arrayOfVideos.forEach((data, i) => {
     let video = document.getElementById("video-" + i);
     video.alt = "generated youtube video";

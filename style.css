@@ -16,12 +16,14 @@
 }
 
 .preference {
+  display: flex;
+  flex-direction: column;
   width: min(30vw, 250px) !important;
   height: min(30vw, 250px) !important;
   border-radius: 1500px;
   margin: auto;
-  align-content: center;
   justify-content: center;
+  align-items: center;
 }
 
 .hover {
@@ -91,4 +93,9 @@ header {
 
 .navLinks {
   align-self: "center";
+}
+
+/* the text area */
+#textArea{
+
 }

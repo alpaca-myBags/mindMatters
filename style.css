@@ -12,10 +12,10 @@
   width: min(15vw, 140px) !important;
   height: min(15vw, 140px) !important;
   border-radius: 500px;
-  margin: auto
+  margin: auto;
 }
 
-.preference{
+.preference {
   width: min(30vw, 250px) !important;
   height: min(30vw, 250px) !important;
   border-radius: 1500px;

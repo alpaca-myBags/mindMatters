@@ -1,3 +1,7 @@
+p{
+  font-size: min(3vw, 2em);
+}
+
 .container {
   max-width: 768px;
   align-self: center;
@@ -6,6 +10,18 @@
 
 .navbar.navbar-6 .navbar-toggler-icon {
   background-image: url("https://mdbootstrap.com/img/svg/hamburger8.svg?color=E3005C");
+}
+
+.button {
+  background-color: #e5056f; 
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: min(1vw, 2em);
+  border-radius: 10px;
 }
 
 .circle {
@@ -31,7 +47,7 @@
 }
 
 .hover:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 .question2,
@@ -88,14 +104,24 @@ header {
 }
 
 #logo {
-  margin-left: 40px;
+  margin: 0;
+  width: 100px;
 }
 
+.navbar{
+  display: flex;
+  flex-direction: row;
+  /* width: 100vw; */
+  padding: 0;
+  /* justify-content: space-between; */
+  align-items: center;
+}
 .navLinks {
   align-self: "center";
 }
 
 /* the text area */
 #textArea{
-
+  width: min(50vw, 600px);
+  height: min(20vh, 300px);
 }

@@ -8,7 +8,7 @@ const userChoices = {
 const moodData = {
   c1: "positivity+affirmations",
   c2: "positivity+encouraging",
-  c3: "self-improvement+energizing",
+  c3: "get-started+energizing",
   c4: "check-in+energizing",
   c5: "energizing+gratitude",
 };
@@ -89,7 +89,7 @@ function generateQuestion() {
       prompt.innerText =
         "you can elaborate if you want, or move on to the next";
       break;
-    case "self-improvement+energizing":
+    case "get-started+energizing":
       prompt.innerText =
         "we have an optional journal entry here, or you can move on";
       break;

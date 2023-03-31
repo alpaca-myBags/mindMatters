@@ -11,10 +11,11 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="background: rgb(249, 234, 244);"></body>
   <div class="pos-t container">
       <div class="collapse" id="navbarToggleExternalContent">
         <div class="p-4" style="display: flex; flex-direction: column">
@@ -59,40 +60,56 @@
         </button>
       </nav>
     </div>
+
+  <!-- example -->
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <H1>Australia</H1>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
+          <h3 class="card-title">Emergency Numbers</h3>
+
+          <p class="card-text"><strong>13 11 14</strong>
+            <br>
+            <a href="https://www.lifeline.org.au/">Lifeline Australia</a>
+            </p>
+            
+            <p>
+            <strong>1800 55 1800</strong>
+            <br>
+            <a href="https://kidshelpline.com.au/">Kids Helpline</a>
+            </p>
+            
+            <p>
+            <strong>13 52 47 </strong>
+            <br>
+            <a href="https://thesamaritans.org.au/">Samaritans</a>
+            <br>
+            </p>
+            <p>
+            Emergency Services: <strong>000</strong>
+            </p>
     
-  <div class="card border border-primary" style="max-width: 18rem;">
-    <div class="card-header"><H2>Australia</H2></div>
-    <div class="card-body text-dark">
-      <h5 class="card-title">Emergency Numbers</h5>
-      <p class="card-text"><strong>13 11 14</strong>
-        <br>
-        <a href="https://www.lifeline.org.au/">Lifeline Australia</a>
-        </p>
-        
-        <p>
-        <strong>1800 55 1800</strong>
-        <br>
-        <a href="https://kidshelpline.com.au/">Kids Helpline</a>
-        </p>
-        
-        <p>
-        <strong>13 52 47 </strong>
-        <br>
-        <a href="https://thesamaritans.org.au/">Samaritans</a>
-        <br>
-        <p>
-        Emergency Services: <strong>000</strong>
-        </p></p>
-    </div>
-    <div class="card">
-        <div class="card-header">
-            <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
-            <H2>Canada</H2>
-            </a>
         </div>
-        <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
-            <div class="card-body">
-                <h5 class="card-title">Emergency Numbers</h5>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingTwo">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <H1>Canada</H1>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-body">
+          <h3 class="card-title">Emergency Numbers</h3>
                 <p class="card-text"><p>
                 <a href="https://talksuicide.ca/">Crisis Services Canada</a>
                 <br> 1-833-456-4566 toll free
@@ -109,18 +126,20 @@
                     Association Candienne Pour la Prevention Du Suicide</a>
                 <p>Emergency Services: 911</p>
                 <p>819-339-3356</p>
-            </div>
         </div>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
-          <H2>UK and Rol</H2>
-        </a>
       </div>
-      <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
-        <div class="card-body">
-         <h5 class="card-title">UK</h5>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+           <h1>UK and Rol</h1>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">
+          <h2 class="card-title">UK</h2>
       <p>
         <strong>116 123</strong>
         <br>
@@ -131,9 +150,9 @@
         <a href="https://www.papyrus-uk.org/">Hope-line UK</a>
         <br>
         <a href="https://www.helplines.org/">Help-lines Partnership</a>
-        <p>Emergency Services:
+       <h4> <p>Emergency Services:
           <strong>999</strong>
-        </p>
+        </p> </h>
       </p>
       <br>
       <h2>ROI</h2>
@@ -144,141 +163,152 @@
       <strong>0808 808 8000</strong>
       <a href="https://www.lifelinehelpline.info/">Life-line</a>
       <br>
-      <p>Emergency Services:
+     <h4> <p>Emergency Services:
         <strong>999</strong>
-      </p>
+      </p> </h4>
         </div>
       </div>
     </div>
-    <div class="card">
-        <div class="card-header">
-            <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseFour">
-            <H2>Europe</H2>
-            </a>
-        </div>
-        <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
-            <div class="card-body">
-            <p>European Emergency Number: 
-            <strong>112</strong>
-            </p>
-            <br>
-            <h3>France (English Speaking)</h3>
-            <strong>0033 145 39 4000</strong>
-            <br>
-            <a href="https://www.suicide-ecoute.fr/">Suicide Ecoute</a>
-            <br>
-            <strong>01 46 21 46 46</strong>
-            <br>
-            <a href="https://soshelpline.org/">SOS Help</a>
-            <br>
-            <br>
-            <h3>Germany</h3>
-            <p>Telefonseelsorge Deutschland (National)</p>
-            <p>German speaking:
-            <strong>0800 -111 0 222</strong>
-            </p>
-            <p>
-            English speaking: 
-            <strong>030-44 01 06 07</strong>
-            </p>
-            <p>Crisis support line 6pm to 12am daily</p>
-            
-            <p>
-                <h3>Italy</h3>
-                <strong>800 86 00 22</strong>
-                <a href="">Samaritans</a>
-            </p>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseFive">
-          <H2>South Africa</H2>
-        </a>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingFour">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <h1>South Africa</h1>
+          </a>
+        </h4>
       </div>
-      <div id="collapseFive" class="collapse" data-bs-parent="#accordion">
-        <div class="card-body">
-        <p>
-        <h3>South Africa</h3>
-        <strong>0861 322 322 </strong>
-        <br>
-        <a href="https://lifelinesa.co.za/">Lifeline Southern Africa</a>
+      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+        <div class="panel-body">
+          <p>
+            <strong>0861 322 322 </strong>
+            <br>
+            <a href="https://lifelinesa.co.za/">Lifeline Southern Africa</a>
+            <p>Emergency Services:
+              <strong> 10 177</strong>
+            </p>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingFive">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            <h1>Japan 日本</h1>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+        <div class="panel-body">
+          <a href="http://www.spc-osaka.org/">BI Suicide Prevention Centre, Osaka</a>
+          <br>
+          +81 (0) 6 4395 4343
+          <br>
+          <br>
+          Tokyo English Lifeline
+          <br>
+          <strong>107-0062</strong>
+          <br>
+          <a href="https://telljp.com/">TellJP</a>
+          <p>
+            Counselling:
+            <strong>03 5774 0992</strong>
+            <br>
+            Face to Face:
+            <strong>03 3498 0231</strong>
+          </p>
+        </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingSix">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            <h1>USA</h1>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+        <div class="panel-body">
+          <h5 class="card-title">Mental Health America</h5>
+          <p class="card-text"><p>1-800-273-TALK (8255)
+            <br>
+            <a href="">Hope-line</a>
+          </p>
+          <p>Emergency Services: 
+            <strong>911</strong>
+          </p>
+        </p>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingSeven">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+            <h1>New Zealand</h1>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+        <div class="panel-body">
+          <strong>09 5222 999</strong> (Auckland)
+          <br>
+        <strong>0800 543 354</strong> (Rest of NZ)
         <p>Emergency Services:
-          <strong> 10 177</strong>
+          <strong>111</strong>
         </p>
       </p>
         </div>
       </div>
     </div>
-  <div class="card">
-      <div class="card-header">
-        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsedSix">
-          <H2>Japan 日本</H2>
-        </a>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingEight">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+            <h1>Europe</h1>
+          </a>
+        </h4>
       </div>
-      
-      <div id="collapsedSix" class="collapse" data-bs-parent="#accordion">
-        <div class="card-body">
-         <a href="http://www.spc-osaka.org/">BI Suicide Prevention Centre, Osaka</a>
-      <br>
-      +81 (0) 6 4395 4343
-      <br>
-      <br>
-      Tokyo English Lifeline
-      <br>
-      <strong>107-0062</strong>
-      <br>
-      <a href="https://telljp.com/">TellJP</a>
-      <p>
-        Counselling:
-        <strong>03 5774 0992</strong>
-        <br>
-        Face to Face:
-        <strong>03 3498 0231</strong>
-      </p>
-    </p>
-        </div>
-      </div>
-    </div>
-  <div class="card">
-      <div class="card-header">
-        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseSeven">
-          <H2>USA</H2>
-        </a>
-      </div>
-      <div id="collapseSeven" class="collapse" data-bs-parent="#accordion">
-        <div class="card-body">
-        <h5 class="card-title">Mental Health America</h5>
-      <p class="card-text"><p>1-800-273-TALK (8255)
-        <br>
-        <a href="">Hope-line</a>
-      </p>
-      <p>Emergency Services: 
-        <strong>911</strong>
-      </p>
-    </p>
-        </div>
-      </div>
-    </div>
-      <div class="card">
-      <div class="card-header">
-        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseEight">
-          <H2>New Zealand</H2>
-        </a>
-      </div>
-      <div id="collapseEight" class="collapse" data-bs-parent="#accordion">
-        <div class="card-body">
-         <strong>09 5222 999</strong> (Auckland)
-      <br>
-    <strong>0800 543 354</strong> (Rest of NZ)
-    <p>Emergency Services:
-      <strong>111</strong>
-    </p>
-  </p>
+      <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+        <div class="panel-body">
+          <p>European Emergency Number: 
+            <strong>112</strong>
+          </p>
+          <br>
+          <h3>France (English Speaking)</h3>
+          <strong>0033 145 39 4000</strong>
+          <br>
+          <a href="https://www.suicide-ecoute.fr/">Suicide Ecoute</a>
+          <br>
+          <strong>01 46 21 46 46</strong>
+          <br>
+          <a href="https://soshelpline.org/">SOS Help</a>
+          <br>
+          <br>
+          <h3>Germany</h3>
+          <p>Telefonseelsorge Deutschland (National)</p>
+          <p>German speaking:
+          <strong>0800 -111 0 222</strong>
+          </p>
+          <p>
+          English speaking: 
+          <strong>030-44 01 06 07</strong>
+          </p>
+          <p>Crisis support line 6pm to 12am daily</p>
+          
+          <p>
+            <h3>Italy</h3>
+            <strong>800 86 00 22</strong>
+            <br>
+            <a href="">Samaritans</a>
+          </p>
         </div>
       </div>
     </div>
   </div>
-</body>
-</html>

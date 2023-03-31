@@ -119,9 +119,41 @@ header {
 .navLinks {
   align-self: "center";
 }
+p {
+  font-size: 1.5em;
+}
 
 /* the text area */
 #textArea{
   width: min(50vw, 600px);
   height: min(20vh, 300px);
 }
+a {
+  font-size: 1.5em;
+}
+
+strong {
+  font-size: 1.5em;
+}
+
+
+a {
+  font-size: 1.5em;
+}
+
+strong {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.5em;
+}
+ .panel{
+  width: 80%;
+  margin: 0 auto;
+ }
+
+ #inner {
+  padding-left: 180px;
+  padding-right: 180px;
+ }

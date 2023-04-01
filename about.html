@@ -88,8 +88,30 @@
         you have any questions or suggestions, please don't hesitate to reach
         out. Thank you for visiting Mind Matters!
 
-        
+
       </p>
     </div>
+
+
+    <body>
+  <div id="shibe-container"></div> <!-- This is the container element we'll use to display the shibe image -->
+  <script>
+    function displayShibeImage() {
+      fetch('http://shibe.online/api/shibes?count=1&urls=true&httpsUrls=true')
+        .then(response => response.json())
+        .then(data => {
+          const container = document.getElementById('shibe-container');
+          const img = document.createElement('img');
+          img.src = data[0];
+          container.appendChild(img);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    }
+
+    displayShibeImage();
+  </script>
+</body>
   </body>
 </html>

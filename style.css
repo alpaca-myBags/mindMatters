@@ -137,4 +137,17 @@ h5 {
 #inner {
   padding-left: 180px;
   padding-right: 180px;
+ }
+
+ #shibe-container {
+  text-align: center;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+#shibe-container img {
+  display: block;
+  max-width: 65%; /* set the maximum width to the container width */
+  height: auto; /* maintain the aspect ratio of the image */
+  margin: 0 auto; /*center the image horizontally */
+  margin-bottom: 2em;
 }

@@ -154,3 +154,46 @@ function changeBackgroundColor(color) {
     "textArea"
   ).style.backgroundColor = `rgb(${textAreaColor[0]}, ${textAreaColor[1]}, ${textAreaColor[2]})`;
 }
+
+// ---- Shiba api ----
+
+fetch('http://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data); // This will log an array of URLs of 10 shibe images
+  })
+  .catch(error => {
+    console.error(error);
+  });
+
+  async function fetchShibeImages() {
+    try {
+      const response = await fetch('http://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true');
+      const data = await response.json();
+      console.log(data); // This will log an array of URLs of 10 shibe images
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  
+  fetchShibeImages();
+
+  function displayShibeImages() {
+    fetch('http://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('shibe-container'); // Assuming you have a container element with ID 'shibe-container'
+        data.forEach(url => {
+          const img = document.createElement('img');
+          img.src = url;
+          container.appendChild(img);
+        });
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
+  
+  displayShibeImages();
+  
+  

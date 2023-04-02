@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 const api_url = "https://type.fit/api/quotes";
 const quoteContainer = document.getElementById("quote-container");
+let currColor = "";
 
 fetch("https://type.fit/api/quotes")
   .then(response => response.json())
@@ -45,6 +46,10 @@ document.querySelectorAll(".circle").forEach(circle => {
     generateQuestion();
     fadeInElement(".question2");
   });
+});
+
+document.getElementById("journalEntry").addEventListener("focus", e => {
+  document.getElementById("textArea").style.backgroundColor = currColor;
 });
 
 document.getElementById("journalEntry").addEventListener("submit", e => {
@@ -137,8 +142,15 @@ function changePreferenceColor(color) {
 }
 
 function changeBackgroundColor(color) {
-  const newNums = color
+  const newNum = color
     .match(/\d+/g)
     .map(num => Math.round(Number(num) + (255 - num) * (1 / 2)));
-  document.body.style.backgroundColor = `rgb(${newNums[0]}, ${newNums[1]}, ${newNums[2]})`;
+  document.body.style.backgroundColor = `rgb(${newNum[0]}, ${newNum[1]}, ${newNum[2]})`;
+  currColor = `rgb(${newNum[0]}, ${newNum[1]}, ${newNum[2]})`;
+  const textAreaColor = newNum.map(num =>
+    Math.round(Number(num) + (255 - num) * (1 / 2))
+  );
+  document.getElementById(
+    "textArea"
+  ).style.backgroundColor = `rgb(${textAreaColor[0]}, ${textAreaColor[1]}, ${textAreaColor[2]})`;
 }

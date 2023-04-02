@@ -1,11 +1,12 @@
 p{
-  font-size: min(3vw, 2em);
+  font-size: 1.5em;
 }
 
 .container {
   max-width: 768px;
   align-self: center;
   justify-content: center;
+  padding: auto 25%;
 }
 
 .navbar.navbar-6 .navbar-toggler-icon {
@@ -20,7 +21,7 @@ p{
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: min(1vw, 2em);
+  font-size: 1.5em;
   border-radius: 10px;
 }
 
@@ -82,20 +83,6 @@ p{
   background-image: none;
 }
 
-/* .videoWrapper {
-  padding-bottom: calc(var(--aspect-ratio, .5625));
-} */
-
-/* @media (min-width: 768px) {
-  .container {
-    max-width: 767px;
-  }
-} */
-
-/* .moodCircles{
-  max-width: 700px;
-} */
-
 /* nav bar */
 header {
   display: flex;
@@ -111,33 +98,26 @@ header {
 .navbar{
   display: flex;
   flex-direction: row;
-  /* width: 100vw; */
   padding: 0;
-  /* justify-content: space-between; */
   align-items: center;
 }
 .navLinks {
   align-self: "center";
-}
-p {
-  font-size: 1.5em;
 }
 
 /* the text area */
 #textArea{
   width: min(50vw, 600px);
   height: min(20vh, 300px);
+  border-style: none;
 }
+
+
 a {
   font-size: 1.5em;
 }
 
 strong {
-  font-size: 1.5em;
-}
-
-
-a {
   font-size: 1.5em;
 }
 
@@ -148,12 +128,13 @@ strong {
 h5 {
   font-size: 1.5em;
 }
- .panel{
+
+.panel{
   width: 80%;
   margin: 0 auto;
- }
+}
 
- #inner {
+#inner {
   padding-left: 180px;
   padding-right: 180px;
- }
+}

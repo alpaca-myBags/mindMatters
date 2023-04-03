@@ -19,13 +19,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
-  <body style="background: rgb(249, 234, 244);">
+  <body style="background: rgb(249, 234, 244)">
     <div class="pos-t container">
       <div class="collapse" id="navbarToggleExternalContent">
         <div class="p-4" style="display: flex; flex-direction: column">
-          <a class="text navLinks" 
-          href="index.html" 
-          style="align-self: center"
+          <a class="text navLinks" href="index.html" style="align-self: center"
             >Home</a
           >
           <a
@@ -34,9 +32,7 @@
             style="align-self: center"
             >Resources</a
           >
-          <a class="text navLinks" 
-          href="about.html" 
-          style="align-self: center"
+          <a class="text navLinks" href="about.html" style="align-self: center"
             >About Us</a
           >
         </div>
@@ -49,7 +45,7 @@
           src="images/group-therapy.png"
           height="30%"
           width="30%"
-          class ="img-fluid"
+          class="img-fluid"
         />
         <button
           class="navbar-toggler aria-controls"
@@ -64,10 +60,10 @@
         </button>
       </nav>
     </div>
-    <div id="paragraph">
+    <div id="paragraph" class="container">
       <p id="inner">
-        Welcome to Mind Matters! We're passionate about helping people find peace
-        and balance in their lives, and we created this website to provide
+        Welcome to Mind Matters! We're passionate about helping people find
+        peace and balance in their lives, and we created this website to provide
         resources and tools to support mental wellness.
         <br />
         <br />
@@ -83,35 +79,35 @@
         depression.
         <br />
         <br />
-        We're excited to be a part of the mental health and mindfulness community,
-        and we look forward to sharing our passion and knowledge with others. If
-        you have any questions or suggestions, please don't hesitate to reach
-        out. Thank you for visiting Mind Matters!
-
-
+        We're excited to be a part of the mental health and mindfulness
+        community, and we look forward to sharing our passion and knowledge with
+        others. If you have any questions or suggestions, please don't hesitate
+        to reach out. Thank you for visiting Mind Matters!
       </p>
     </div>
 
-
     <body>
-  <div id="shibe-container"></div> <!-- This is the container element we'll use to display the shibe image -->
-  <script>
-    function displayShibeImage() {
-      fetch('http://shibe.online/api/shibes?count=1&urls=true&httpsUrls=true')
-        .then(response => response.json())
-        .then(data => {
-          const container = document.getElementById('shibe-container');
-          const img = document.createElement('img');
-          img.src = data[0];
-          container.appendChild(img);
-        })
-        .catch(error => {
-          console.error(error);
-        });
-    }
+      <div id="shibe-container"></div>
+      <!-- This is the container element we'll use to display the shibe image -->
+      <script>
+        function displayShibeImage() {
+          fetch(
+            "http://shibe.online/api/shibes?count=1&urls=true&httpsUrls=true"
+          )
+            .then(response => response.json())
+            .then(data => {
+              const container = document.getElementById("shibe-container");
+              const img = document.createElement("img");
+              img.src = data[0];
+              container.appendChild(img);
+            })
+            .catch(error => {
+              console.error(error);
+            });
+        }
 
-    displayShibeImage();
-  </script>
-</body>
+        displayShibeImage();
+      </script>
+    </body>
   </body>
 </html>

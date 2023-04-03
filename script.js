@@ -14,7 +14,7 @@ const moodData = {
 };
 
 /// VARIABLE DECLARATIONS ///
-const youtubeKey = config.youtubeKey;
+const youtubeKey = "AIzaSyCE-shpndqMLi7whRXm5uwvTy7cguKftiw"; //config.youtubeKey;
 // const api_url = "https://type.fit/api/quotes";
 
 /// DOM CONTENT LOADING ///

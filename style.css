@@ -51,6 +51,11 @@ p {
   transform: scale(1.15);
 }
 
+.hover.clicked {
+  transform: scale(1.15);
+}
+
+
 .question2,
 .question3,
 .confirmation,

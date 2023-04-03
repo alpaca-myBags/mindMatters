@@ -38,9 +38,11 @@ fetch("https://type.fit/api/quotes")
   .catch(error => console.log(error));
 
 /// QUERY SELECTORS ///
-document.querySelectorAll(".circle").forEach(circle => {
+const circleIcons = document.querySelectorAll(".circle");
+circleIcons.forEach(circle => {
   circle.addEventListener("click", e => {
     userChoices.mood = moodData[e.target.id];
+    choiceVisible(e.target.id);
     changePreferenceColor(e.target.style.backgroundColor);
     changeBackgroundColor(e.target.style.backgroundColor);
     generateQuestion();
@@ -61,6 +63,7 @@ document.getElementById("journalEntry").addEventListener("submit", e => {
 document.querySelectorAll(".preference").forEach(circle => {
   circle.addEventListener("click", e => {
     userChoices.preference = e.target.id;
+    choiceVisible(e.target.id);
     fadeInElement(".confirmation");
   });
 });
@@ -155,9 +158,29 @@ function changeBackgroundColor(color) {
   ).style.backgroundColor = `rgb(${textAreaColor[0]}, ${textAreaColor[1]}, ${textAreaColor[2]})`;
 }
 
+function choiceVisible(choice) {
+  if (choice[0] == "c") {
+    circleIcons.forEach(circle => {
+      if (circle.id == choice) {
+        circle.classList.add("clicked"); //if its clicked
+      } else {
+        circle.classList.remove("clicked");
+      }
+    });
+  } else {
+    if (choice == "meditation") {
+      document.getElementById("meditation").classList.add("clicked");
+      document.getElementById("yoga").classList.remove("clicked");
+    } else {
+      document.getElementById("meditation").classList.remove("clicked");
+      document.getElementById("yoga").classList.add("clicked");
+    }
+  }
+}
+
 // ---- Shiba api ----
 
-fetch('http://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true')
+fetch("http://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true")
   .then(response => response.json())
   .then(data => {
     console.log(data); // This will log an array of URLs of 10 shibe images
@@ -166,34 +189,34 @@ fetch('http://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true')
     console.error(error);
   });
 
-  async function fetchShibeImages() {
-    try {
-      const response = await fetch('http://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true');
-      const data = await response.json();
-      console.log(data); // This will log an array of URLs of 10 shibe images
-    } catch (error) {
-      console.error(error);
-    }
+async function fetchShibeImages() {
+  try {
+    const response = await fetch(
+      "http://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true"
+    );
+    const data = await response.json();
+    console.log(data); // This will log an array of URLs of 10 shibe images
+  } catch (error) {
+    console.error(error);
   }
-  
-  fetchShibeImages();
+}
 
-  function displayShibeImages() {
-    fetch('http://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true')
-      .then(response => response.json())
-      .then(data => {
-        const container = document.getElementById('shibe-container'); // Assuming you have a container element with ID 'shibe-container'
-        data.forEach(url => {
-          const img = document.createElement('img');
-          img.src = url;
-          container.appendChild(img);
-        });
-      })
-      .catch(error => {
-        console.error(error);
+fetchShibeImages();
+
+function displayShibeImages() {
+  fetch("http://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true")
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById("shibe-container"); // Assuming you have a container element with ID 'shibe-container'
+      data.forEach(url => {
+        const img = document.createElement("img");
+        img.src = url;
+        container.appendChild(img);
       });
-  }
-  
-  displayShibeImages();
-  
-  
+    })
+    .catch(error => {
+      console.error(error);
+    });
+}
+
+displayShibeImages();

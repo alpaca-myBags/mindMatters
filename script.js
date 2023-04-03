@@ -45,6 +45,7 @@ circleIcons.forEach(circle => {
     changePreferenceColor(e.target.style.backgroundColor);
     changeBackgroundColor(e.target.style.backgroundColor);
     generateQuestion();
+    document.querySelector("#textArea").value = "";
     fadeInElement(".question2");
   });
 });

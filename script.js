@@ -91,22 +91,22 @@ function generateQuestion() {
   switch (userChoices.mood) {
     case "positivity+affirmations":
       prompt.innerText =
-        "that sucks, you can elaborate if you want, or move on to the next";
+        "That sucks, you can elaborate if you want, or move on to the next";
       break;
     case "positivity+encouraging":
       prompt.innerText =
-        "you can elaborate if you want, or move on to the next";
+        "You can elaborate if you want, or move on to the next";
       break;
     case "get-started+energizing":
       prompt.innerText =
-        "we have an optional journal entry here, or you can move on";
+        "We have an optional journal entry here, or you can move on";
       break;
     case "check-in+energizing":
       prompt.innerText =
-        "thats good! you can talk about it more, or go to the next";
+        "Thats good! you can talk about it more, or go to the next";
       break;
     case "energizing+gratitude":
-      prompt.innerText = "lovely! you can share some more, or move on";
+      prompt.innerText = "Lovely! you can share some more, or move on";
       break;
   }
 }

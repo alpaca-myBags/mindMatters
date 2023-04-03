@@ -188,19 +188,6 @@ fetch("http://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true")
     console.error(error);
   });
 
-async function fetchShibeImages() {
-  try {
-    const response = await fetch(
-      "https://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true"
-    );
-    const data = await response.json();
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-fetchShibeImages();
-
 function displayShibeImages() {
   fetch("https://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true")
     .then(response => response.json())

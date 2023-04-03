@@ -78,6 +78,7 @@ p {
 
 .carousel-control {
   width: 5%;
+  height: auto;
 }
 
 .carousel-control.left,

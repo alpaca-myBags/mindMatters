@@ -32,7 +32,6 @@ fetch("https://type.fit/api/quotes")
   .then(response => response.json())
   .then(data => {
     let index = Math.floor(Math.random() * 1643);
-    console.log(data[index]);
     quoteContainer.innerText = `${data[index].text} - ${data[index].author}`;
   })
   .catch(error => console.log(error));
@@ -87,7 +86,6 @@ const fetchData = async url => {
 
 function generateQuestion() {
   let prompt = document.querySelector(".journalPrompt");
-  console.log(userChoices.mood);
   switch (userChoices.mood) {
     case "positivity+affirmations":
       prompt.innerText =
@@ -123,7 +121,6 @@ function addVideosToPage(arrayOfVideos) {
   while (videoDiv.firstChild) {
     videoDiv.removeChild(videoDiv.firstChild);
   }
-  console.log(arrayOfVideos);
   arrayOfVideos.forEach((data, i) => {
     let video = document.getElementById("video-" + i);
     video.alt = "generated youtube video";
@@ -193,10 +190,9 @@ fetch("http://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true")
 async function fetchShibeImages() {
   try {
     const response = await fetch(
-      "http://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true"
+      "https://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true"
     );
     const data = await response.json();
-    console.log(data); // This will log an array of URLs of 10 shibe images
   } catch (error) {
     console.error(error);
   }

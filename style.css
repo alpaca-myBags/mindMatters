@@ -55,7 +55,6 @@ p {
   transform: scale(1.15);
 }
 
-
 .question2,
 .question3,
 .confirmation,
@@ -160,4 +159,16 @@ h5 {
   pointer-events: none;
   width: 100%;
   height: 100%;
+}
+
+textarea {
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  text-align: center;
 }

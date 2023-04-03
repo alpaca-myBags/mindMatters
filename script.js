@@ -136,6 +136,7 @@ function addVideosToPage(arrayOfVideos) {
 function fadeInElement(queryName) {
   let element = document.querySelector(queryName);
   element.classList.add("visible");
+  element.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
 function changePreferenceColor(color) {

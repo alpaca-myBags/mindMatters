@@ -205,7 +205,7 @@ async function fetchShibeImages() {
 fetchShibeImages();
 
 function displayShibeImages() {
-  fetch("http://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true")
+  fetch("https://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true")
     .then(response => response.json())
     .then(data => {
       const container = document.getElementById("shibe-container"); // Assuming you have a container element with ID 'shibe-container'

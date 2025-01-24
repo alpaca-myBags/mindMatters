@@ -1,4 +1,4 @@
-# mindMatters
+# Mind Matters
 
 [Deployed Site](https://alpaca-mybags.github.io/mindMatters/)
 
